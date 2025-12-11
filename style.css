@@ -1,0 +1,252 @@
+/* ========================
+   GENERAL RESET & BODY
+========================= */
+body {
+    font-family: 'Courier New', Courier, monospace; /* newspaper feel */
+    margin: 0;
+    padding: 0;
+    background: #f5f1e6; /* old paper color */
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ========================
+   HEADER
+========================= */
+header {
+    background: #3b2f2f;
+    color: #fff;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 5px dashed #222; /* comic panel vibe */
+    font-family: 'Permanent Marker', cursive; /* comic style heading */
+    text-shadow: 2px 2px #f5f1e6;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+header .subheading {
+    font-size: 1.2rem;
+    color: #f5f1e6;
+}
+
+/* ========================
+   NAVIGATION
+========================= */
+nav {
+    background: #e0d6c3;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 3px dashed #222;
+}
+
+nav a {
+    color: #3b2f2f;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: #ff4b2b; /* comic accent color */
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #ff4b2b;
+}
+
+nav a.active {
+    color: #ff4b2b;
+}
+
+/* ========================
+   CONTAINER / CARDS
+========================= */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fffdf5; /* paper background */
+    border: 3px dotted #222; /* comic panel border */
+    border-radius: 5px;
+    box-shadow: 6px 6px 0 #ccc; /* comic shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px) rotate(-1deg);
+    box-shadow: 8px 8px 0 #bbb;
+}
+
+/* ========================
+   HEADINGS & TEXT
+========================= */
+h2 {
+    font-family: 'Permanent Marker', cursive; /* comic style heading */
+    color: #3b2f2f;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px #f5f1e6;
+}
+
+h3 {
+    color: #3b2f2f;
+}
+
+p, li {
+    font-family: 'Courier New', Courier, monospace; /* newspaper text */
+    font-size: 1rem;
+    color: #222;
+}
+
+/* ========================
+   LISTS
+========================= */
+ul.portfolio-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.portfolio-list li {
+    background: #fff7e6;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #3b2f2f;
+    box-shadow: 2px 2px 0 #ccc;
+}
+
+/* ========================
+   IMAGES
+========================= */
+img {
+    width: 220px;
+    border: 3px solid #222;
+    margin-top: 15px;
+    transform: rotate(-1deg);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 6px 6px 0 #ccc;
+}
+
+/* ========================
+   BUTTONS
+========================= */
+button {
+    padding: 12px 25px;
+    border: 3px solid #222;
+    border-radius: 5px;
+    background: #ffeb3b; /* bright comic color */
+    color: #3b2f2f;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 4px 4px 0 #222;
+    background: #ffc107;
+}
+
+/* ========================
+   FORM INPUTS
+========================= */
+form input, form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #222;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff4b2b;
+    box-shadow: 2px 2px 0 #ccc;
+}
+
+/* ========================
+   ANIMATION
+========================= */
+.fade {
+    animation: popIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8) rotate(-2deg); }
+    50% { transform: scale(1.1) rotate(2deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* ========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    margin: 50px 0;
+    font-weight: 600;
+    color: #3b2f2f;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    img {
+        width: 180px;
+    }
+}
+.timetable-img {
+    width: 100%;       /* fill container width */
+    max-width: 800px;  /* bigger than other images */
+    border-radius: 15px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wide-img {
+    width: 100%;
+    max-width: 700px; /* Adjust this number to make it wider or narrower */
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* optional */
+}

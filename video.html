@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>My Video</h1>
+    <p class="subheading">A glimpse of my projects and presentations</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="biodata.html">My Biodata</a>
+    <a href="portfolio.html">My Portfolio</a>
+    <a href="video.html" class="active">My Video</a>
+    <a href="comments.html">Your Comments</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+    <section class="container fade">
+        <h2>Featured Video</h2>
+        <p>Check out my latest project demonstration:</p> 
+        <div class="video-wrapper">
+            <video width="100%" controls poster="thumbnails 1.jpg">
+                <source src="atas.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button onclick="alert('Thanks for watching!')">Like this Video</button>
+    </section>
+
+    <section class="container fade">
+        <h2>Other Videos</h2>
+        <p>Here are more of my projects and presentations:</p>
+        <div class="video-list">
+            <video width="100%" controls poster="pic1.jpg">
+                <source src="forest.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+</main>
+
+<!-- SCRIPT -->
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Comments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Your Comments</h1>
+    <p class="subheading">We’d love to hear from you!</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="biodata.html">My Biodata</a>
+    <a href="portfolio.html">My Portfolio</a>
+    <a href="video.html">My Video</a>
+    <a href="comments.html" class="active">Your Comments</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+    <section class="container fade">
+        <h2>Leave Your Feedback</h2>
+        <p>Your thoughts and feedback help me improve this website. Please fill out the form below:</p>
+
+        <form id="commentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <label for="comment">Your Comment:</label>
+            <textarea id="comment" placeholder="Write your comment here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="thankYouMessage" class="fade" style="display:none; margin-top:20px;">
+            <p>Thank you for your feedback! </p>
+        </div>
+    </section>
+</main>
+
+<!-- SCRIPT -->
+<script src="js/script.js"></script>
+<script>
+    // Handle form submission
+    const form = document.getElementById('commentForm');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // prevent actual form submission
+        form.reset(); // clear form fields
+        thankYou.style.display = 'block'; // show thank you message
+        thankYou.style.opacity = 0;
+        setTimeout(() => {
+            thankYou.style.transition = "opacity 1s ease";
+            thankYou.style.opacity = 1;
+        }, 50);
+    });
+</script>
+</body>
+</html>
